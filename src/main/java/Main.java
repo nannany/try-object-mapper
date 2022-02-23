@@ -32,7 +32,5 @@ public class Main {
         assertThat(disableFailOnUnknownPropertiesObjectMapper.readValue(new File("src/main/resources/has-unknown.json"), Human.class))
                 .isEqualTo(expected);
 
-
-
-    }
+   }
 }
