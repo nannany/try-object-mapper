@@ -29,6 +29,7 @@ public class Main {
                 .isExactlyInstanceOf(UnrecognizedPropertyException.class);
 
         // 余計なkey-valueが入っている
+        // FAIL_ON_UNKNOWN_PROPERTIES を入れたObjectMapper
         assertThat(disableFailOnUnknownPropertiesObjectMapper.readValue(new File("src/main/resources/has-unknown.json"), Human.class))
                 .isEqualTo(expected);
 
