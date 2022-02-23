@@ -1,6 +1,6 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 import enums.Sex;
-import record.Human;
+import records.Human;
 
 import java.io.File;
 import java.io.IOException;
