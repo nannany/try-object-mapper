@@ -22,12 +22,11 @@ public enum Sex {
         return this.japanese;
     }
 
-    static Map<String, Sex> adapterMap =
+    static Map<String, Sex> correspondenceTable =
             Arrays.stream(Sex.values()).collect(Collectors.toMap(Sex::getJapanese, Function.identity()));
 
     @JsonCreator
     static Sex getSex(String japanese){
-        System.out.println(japanese);
-        return adapterMap.get(japanese);
+        return correspondenceTable.get(japanese);
     }
 }
